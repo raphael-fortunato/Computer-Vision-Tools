@@ -27,8 +27,8 @@ class BaseModel(nn.Module):
         return out, feat
 
 
-def get_vgg19(path=None):
-    model =models.vgg16_bn(pretrained=True)
+def get_vgg(path=None):
+    model =models.vgg11_bn(pretrained=True)
     model.load_state_dict(torch.load('models/pretrained_vgg19_bn.pt'))
     backbone = nn.Sequential(*list(model.children())[:-2])
     dense = nn.Sequential(
@@ -45,8 +45,8 @@ def get_vgg19(path=None):
     return model
 
 
-def get_resnet50(path=None):
-    model = models.resnet50(pretrained=False)
+def get_resnet(path=None):
+    model = models.resnet18(pretrained=False)
     model.load_state_dict(torch.load('models/pretrained_resnet50.pt'))
     num_ftrs = model.fc.in_features
     backbone = nn.Sequential(*list(model.children())[:-2])

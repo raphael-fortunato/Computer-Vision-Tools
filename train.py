@@ -132,8 +132,14 @@ def get_transforms(args, train):
 
 
 def get_dataloaders(args, train):
-    train_dataset = torchvision.datasets.ImageFolder(args.root, transform=transforms)
-    train_dataset = torchvision.datasets.ImageFolder(args.root, transform=transforms)
+    train_dataset = torchvision.datasets.ImageFolder(
+            args.root,
+            transform=transforms
+            )
+    train_dataset = torchvision.datasets.ImageFolder(
+            args.root,
+            transform=transforms
+            )
 
     len_dataset = len(dataset)
     indices = list(range(len_dataset))
@@ -174,9 +180,9 @@ if __name__ == "__main__":
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     # define classification model
     if args.model == 'resnet':
-        model = get_resnet50(args.path)
+        model = get_resnet(args.path)
     elif args.model == 'vgg':
-        model = get_vgg19(args.path)
+        model = get_vgg(args.path)
     else:
         print("invalid model name")
         sys.exit(1)

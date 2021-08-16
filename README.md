@@ -1,4 +1,4 @@
-# Torch Vision Tools
+# Computer Vision Tools
 
 
 This repo contains generic tools to easily train, test and visualize classification

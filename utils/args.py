@@ -112,6 +112,16 @@ def detection_args():
             required=False,
             help='use segmentation as data augmentation')
     parser.add_argument(
+            '--det_root',
+            action='store_true',
+            required=False,
+            help='The root directory of the bbx dataset')
+    parser.add_argument(
+            '--seg_root',
+            action='store_true',
+            required=False,
+            help='The root directory of the seg dataset')
+    parser.add_argument(
             '--seed',
             type=int,
             default=0,
@@ -172,3 +182,4 @@ def detection_args():
             required=False,
             help='threshold used for inference')
     return parser.parse_args()
+
