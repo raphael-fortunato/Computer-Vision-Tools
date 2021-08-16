@@ -76,13 +76,13 @@ def test_model(args, model, dataloader, criterion):
 
 
 def get_transforms(args):
-        transform = transforms.Compose([
-                    transforms.ToTensor(),
-                    transforms.Resize((args.img_size, args.img_size)),
-                    transforms.Normalize(
-                        [0.485, 0.456, 0.406],
-                        [0.229, 0.224, 0.225])
-                    ])
+    transform = transforms.Compose([
+                transforms.ToTensor(),
+                transforms.Resize((args.img_size, args.img_size)),
+                transforms.Normalize(
+                    [0.485, 0.456, 0.406],
+                    [0.229, 0.224, 0.225])
+                ])
     return transform
 
 
