@@ -10,3 +10,4 @@ and detection CNNs.
 - Mask RCNN train script capable of training detection branch only
 - GradCam visualizations
 - t-SNE plotting 
+- web scrapping scripts to collect datasets
