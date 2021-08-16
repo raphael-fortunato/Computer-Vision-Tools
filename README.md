@@ -6,7 +6,7 @@ and detection CNNs.
 
 ****Currently Contains****
 
-- Train and Test scripts for pretrained CNNs
-- Train and Test scripts for the Mask RCNN
+- train and test scripts for pretrained CNNs
+- Mask RCNN train script capable of training detection branch only
 - GradCam visualizations
 - t-SNE plotting 
